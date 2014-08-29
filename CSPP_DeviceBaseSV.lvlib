@@ -2626,45 +2626,14 @@ IVIFGEN_VAL_TRIGGER_SOURCE_RTSI6 ("RTSI6")      - RTSI Bus Line 6
 			<Property Name="typeDesc" Type="Bin">%Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"-!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
 		<Item Name="myFgen_TriggerSource_0" Type="Variable">
-			<Property Name="Description:Description" Type="Str">Specify the trigger source you want to use.  The driver sets the Trigger Source [TRG] property to this value.
-
-After you call the IviFgen_InitiateGeneration VI, the function generator waits for the trigger you specify in this parameter. After it receives a trigger, the function generator produces output based on the value of the IviFgen &gt;&gt; Basic Operation&gt;&gt;Operation Mode property.
-
-Defined Values:
-IVIFGEN_VAL_INTERNAL_TRIGGER - Internal
-IVIFGEN_VAL_EXTERNAL         - External
-IVIFGEN_VAL_SOFTWARE_TRIG    - Software Trigger Function
-IVIFGEN_VAL_TTL0             - PXI TRIG0 or VXI TTL0
-IVIFGEN_VAL_TTL1             - PXI TRIG1 or VXI TTL1
-IVIFGEN_VAL_TTL2             - PXI TRIG2 or VXI TTL2
-IVIFGEN_VAL_TTL3             - PXI TRIG3 or VXI TTL3
-IVIFGEN_VAL_TTL4             - PXI TRIG4 or VXI TTL4
-IVIFGEN_VAL_TTL5             - PXI TRIG5 or VXI TTL5
-IVIFGEN_VAL_TTL6             - PXI TRIG6 or VXI TTL6
-IVIFGEN_VAL_TTL7             - PXI TRIG7 or VXI TTL7
-IVIFGEN_VAL_ECL0             - VXI ECL0
-IVIFGEN_VAL_ECL1             - VXI ECL1
-IVIFGEN_VAL_PXI_STAR         - PXI Star
-IVIFGEN_VAL_RTSI_0           - RTSI line 0
-IVIFGEN_VAL_RTSI_1           - RTSI line 1
-IVIFGEN_VAL_RTSI_2           - RTSI line 2
-IVIFGEN_VAL_RTSI_3           - RTSI line 3
-IVIFGEN_VAL_RTSI_4           - RTSI line 4
-IVIFGEN_VAL_RTSI_5           - RTSI line 5
-IVIFGEN_VAL_RTSI_6           - RTSI line 6
-
-Default Value:
-IVIFGEN_VAL_EXTERNAL - External</Property>
-			<Property Name="featurePacks" Type="Str">Description,Network,Initial Value</Property>
-			<Property Name="Initial Value:Value" Type="Str"></Property>
+			<Property Name="featurePacks" Type="Str">Network</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:SingleWriter" Type="Str">False</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/CS++.lvproj/My Computer/Examples/CS++Core-ExampleSV.lvlib/myFgen/</Property>
 			<Property Name="type" Type="Str">Network</Property>
-			<Property Name="typeDesc" Type="Bin">%Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!I*!!!!"-!A!!!!!!"!""!-0````]'5X2S;7ZH!!!"!!!!!!!!!!!!!!!!!!!</Property>
+			<Property Name="typeDesc" Type="Bin">%Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"-!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
 		<Item Name="myFgen_Waveform_0" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Pass the standard waveform that you want the function generator to produce.  The driver sets the IviFgen&gt;&gt;Standard Function Output&gt;&gt;Waveform [STD] property to this value.
