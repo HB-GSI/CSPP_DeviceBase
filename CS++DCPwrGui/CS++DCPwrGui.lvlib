@@ -52,5 +52,8 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 	<Item Name="Messages" Type="Folder">
 		<Item Name="UpdatePV.lvclass" Type="LVClass" URL="../../CS++DCPwrGui Messages/UpdatePV/UpdatePV.lvclass"/>
 	</Item>
+	<Item Name="CS++DCPwrChannelData.lvclass" Type="LVClass" URL="../CS++DCPwrChannelData/CS++DCPwrChannelData.lvclass">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+	</Item>
 	<Item Name="CS++DCPwrGui.lvclass" Type="LVClass" URL="../CS++DCPwrGui.lvclass"/>
 </Library>
