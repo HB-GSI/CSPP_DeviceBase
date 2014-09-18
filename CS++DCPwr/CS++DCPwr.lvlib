@@ -69,6 +69,7 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 			<Item Name="Configure Current Limit Msg.lvclass" Type="LVClass" URL="../../CS++DCPwr Messages/Configure Current Limit Msg/Configure Current Limit Msg.lvclass"/>
 			<Item Name="Configure OVP Msg.lvclass" Type="LVClass" URL="../../CS++DCPwr Messages/Configure OVP Msg/Configure OVP Msg.lvclass"/>
 			<Item Name="Configure Voltage Level Msg.lvclass" Type="LVClass" URL="../../CS++DCPwr Messages/Configure Voltage Level Msg/Configure Voltage Level Msg.lvclass"/>
+			<Item Name="Configure Desired Output State Msg.lvclass" Type="LVClass" URL="../../CS++DCPwr Messages/Configure Desired Output State Msg/Configure Desired Output State Msg.lvclass"/>
 		</Item>
 		<Item Name="Output" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
