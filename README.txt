@@ -20,7 +20,7 @@ Related documents and information
 
 GIT Submodules
 ==============
-This package can used as submodule
+This package can be used as submodule
 - Packages\CSPP_DeviceBase: Definition of CS++Device ancestor classes
 
 External Dependencies
