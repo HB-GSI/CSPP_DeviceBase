@@ -18,7 +18,6 @@ Related documents and information
   - Project-Wiki: https://github.com/HB-GSI/CSPP/wiki
   - NI Actor Framework: https://decibel.ni.com/content/groups/actor-framework-2011?view=overview
 
-
 GIT Submodules
 ==============
 This package can used as submodule
