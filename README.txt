@@ -1,10 +1,10 @@
-CSPP_DeviceBase extends the CS++_Core package of the CS++-Project. 
+CSPP_DeviceBase extends the CSPP_Core package of the CS++-Project. 
 
 It contains derived classes of the CS++DeviceActor and corresponding CS++DeviceGUIActor. 
 
 Refer to https://github.com/HB-GSI/CSPP for CS++ project overview, details and documentation.
 
-LabVIEW 2013 is currently used development.
+LabVIEW 2014 is the currently used development environment.
 
 Related documents and information
 =================================
@@ -18,24 +18,29 @@ Related documents and information
   - Project-Wiki: https://github.com/HB-GSI/CSPP/wiki
   - NI Actor Framework: https://decibel.ni.com/content/groups/actor-framework-2011?view=overview
 
-You can use this package as GIT Submodule.
+
+GIT Submodules
+==============
+This package can used as submodule
+- Packages\CSPP_DeviceBase: Definition of CS++Device ancestor classes
 
 External Dependencies
-=================================
+---------------------
 - CSPP_Core: http://github.com/HB-GSI/CSPP_Core
 
-Optional submodules available:
+Optional submodules
+-------------------
 - CSPP_IVI: Implementations of CS++Device base classes using IVI driver
 - CSPP_Examples
-
 
 Getting started:
 =================================
 - Add CS++DeviceBase-Content.vi into your own LabVIEW project. You can drag the desired libraries from the dependencies into your virtual project folder structure.
+- Add CS++DeviceBase-Content.vi into your desired case of the CS++UserContents.vi
 - You need to extend your project specific ini-file.
-  - Sample ini-file should be available for all classes, either in the LV-Project or on disk in the corresponding class or package folder.
-- You need to create and deploy your project specific shared Variable libraries.
-  - Sample shared Variable libraries should be available for all concerned classes on disk in the corresponding class or package folder.
+  - A sample ini-file should be available for all classes on disk in the corresponding package folder.
+- You need to create and deploy your project specific shared variable libraries.
+  - A sample shared variable library should be available on disk in the corresponding package folder.
 
 
 Author: H.Brand@gsi.de, D.Neidherr@gsi.de
