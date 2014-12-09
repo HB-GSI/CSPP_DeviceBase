@@ -14,7 +14,7 @@ Related documents and information
 - Contact: H.Brand@gsi.de or D.Neidherr@gsi.de
 - Download, bug reports... : http://github.com/HB-GSI/CSPP_DeviceBase
 - Documentation:
-  - Refer to Documantation Folder
+  - Refer to package folder
   - Project-Wiki: https://github.com/HB-GSI/CSPP/wiki
   - NI Actor Framework: https://decibel.ni.com/content/groups/actor-framework-2011?view=overview
 
