@@ -2687,15 +2687,15 @@ Default value: IVISCOPE_VAL_AC_LINE_POSITIVE
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
-		<Item Name="myScope_AcquisistionStartTime" Type="Variable">
+		<Item Name="myScope_AcquisitionStartTime" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Specify the length of time from the trigger event to the first point in the waveform record. If this value is positive, the first point in the waveform record occurs after the trigger event. If this value is negative, the first point in the waveform record occurs before the trigger event.
 The driver uses this value to set the IviScope&gt;&gt;Acquisition&gt;&gt;Acquisition Start Time property. 
 
 Units: seconds
 
 Default Value: 0.0 s</Property>
-			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
-			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="featurePacks" Type="Str">Description,Initial Value,Network</Property>
+			<Property Name="Initial Value:Value" Type="Str">0.000000</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
@@ -2704,7 +2704,7 @@ Default Value: 0.0 s</Property>
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
-		<Item Name="myScope_AcquisistionStatus" Type="Variable">
+		<Item Name="myScope_AcquisitionStatus" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Returns the acquisition status of the oscilloscope.  Possible values that this parameter returns are:
 
 - IVISCOPE_VAL_ACQ_IN_PROGRESS (0) - The oscilloscope is currently acquiring a waveform.
@@ -2712,7 +2712,7 @@ Default Value: 0.0 s</Property>
 - IVISCOPE_VAL_ACQ_COMPLETE (1) - The acquisition is complete.
 
 - IVISCOPE_VAL_ACQ_STATE_UNKNOWN (-1) - The driver cannot determine the status of the acquisition.</Property>
-			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="featurePacks" Type="Str">Description,Initial Value,Network</Property>
 			<Property Name="Initial Value:Value" Type="Str">1</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2722,7 +2722,7 @@ Default Value: 0.0 s</Property>
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
-		<Item Name="myScope_AcqusistionType" Type="Variable">
+		<Item Name="myScope_AcquisitionType" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Specify the manner in which you want the oscilloscope to acquire data and fill the waveform record. The driver sets the IviScope&gt;&gt;Acquisition&gt;&gt;Acquisition Type to this value. 
 
 Defined Values:
@@ -2766,7 +2766,7 @@ Defined Values:
 Default value: IVISCOPE_VAL_NORMAL
 
 Note: 	When you set this parameter to IVISCOPE_VAL_ENVELOPE or IVISCOPE_VAL_PEAK_DETECT, the oscilloscope acquires minimum and maximum waveforms. To retrieve the minimum and maximum waveforms, use the IviScope Read Min Max Waveform [MmW] and IviScope Fetch Min Max Waveform [MmW] VIs.</Property>
-			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="featurePacks" Type="Str">Description,Initial Value,Network</Property>
 			<Property Name="Initial Value:Value" Type="Str">0</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2903,9 +2903,9 @@ Default Value: TRUE
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"1!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
 		</Item>
-		<Item Name="myScope_ContinousAcquisistion" Type="Variable">
+		<Item Name="myScope_ContinousAcquisition" Type="Variable">
 			<Property Name="Description:Description" Type="Str">Specifies whether you want to enable continuous acquisition on the oscilloscope. The driver uses this value to set the IviScope&gt;&gt;Acquisition&gt;&gt;Initiate Continuous [CA] property.</Property>
-			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="featurePacks" Type="Str">Description,Initial Value,Network</Property>
 			<Property Name="Initial Value:Value" Type="Str">False</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
@@ -2929,7 +2929,31 @@ Default Value: TRUE
 			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!I*!!!!"1!A!!!!!!"!""!-0````]'5X2S;7ZH!!!"!!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
 		<Item Name="myScope_ErrorCode" Type="Variable">
-			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Alarming:EventOnDataChange" Type="Str">False</Property>
+			<Property Name="Alarming:EventOnUserInputOnly" Type="Str">True</Property>
+			<Property Name="Alarming:Hi:AckType" Type="Str">Auto</Property>
+			<Property Name="Alarming:Hi:AllowLog" Type="Str">True</Property>
+			<Property Name="Alarming:Hi:Area" Type="Str">CS++Example</Property>
+			<Property Name="Alarming:Hi:Deadband" Type="Str">0.01</Property>
+			<Property Name="Alarming:Hi:Description" Type="Str">Warning occurred</Property>
+			<Property Name="Alarming:Hi:Enabled" Type="Str">True</Property>
+			<Property Name="Alarming:Hi:Limit" Type="Str">1</Property>
+			<Property Name="Alarming:Hi:Name" Type="Str">HI</Property>
+			<Property Name="Alarming:Hi:Priority" Type="Str">1</Property>
+			<Property Name="Alarming:HiHi:Enabled" Type="Str">False</Property>
+			<Property Name="Alarming:Lo:AckType" Type="Str">Auto</Property>
+			<Property Name="Alarming:Lo:AllowLog" Type="Str">True</Property>
+			<Property Name="Alarming:Lo:Area" Type="Str">CS++Example</Property>
+			<Property Name="Alarming:Lo:Deadband" Type="Str">0.01</Property>
+			<Property Name="Alarming:Lo:Description" Type="Str">Error occurred</Property>
+			<Property Name="Alarming:Lo:Enabled" Type="Str">True</Property>
+			<Property Name="Alarming:Lo:Limit" Type="Str">-1</Property>
+			<Property Name="Alarming:Lo:Name" Type="Str">LO</Property>
+			<Property Name="Alarming:Lo:Priority" Type="Str">1</Property>
+			<Property Name="Alarming:LoLo:Enabled" Type="Str">False</Property>
+			<Property Name="Alarming:ROC:Enabled" Type="Str">False</Property>
+			<Property Name="Alarming:Status:Enabled" Type="Str">False</Property>
+			<Property Name="featurePacks" Type="Str">Network,Alarming</Property>
 			<Property Name="Network:BuffSize" Type="Str">50</Property>
 			<Property Name="Network:ElemSize" Type="Str">1</Property>
 			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
@@ -2937,7 +2961,7 @@ Default Value: TRUE
 			<Property Name="Network:UseBinding" Type="Str">False</Property>
 			<Property Name="Network:UseBuffering" Type="Str">False</Property>
 			<Property Name="numTypedefs" Type="UInt">0</Property>
-			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="Path" Type="Str">/CS++Dev.lvproj/My Computer/Packages/CSPP_DeviceBase/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
 			<Property Name="type" Type="Str">Network</Property>
 			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
