@@ -2665,4 +2665,1412 @@ IVIFGEN_VAL_WFM_DC - Constant voltage
 			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
 		</Item>
 	</Item>
+	<Item Name="myScope" Type="Folder">
+		<Item Name="myScope_ACLineTriggerSlope" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify whether you want the oscilloscope to trigger on a zero crossing with a positive, negative, or either slope of the network supply voltage.  The driver uses this value to set the IVISCOPE_ATTR_AC_LINE_TRIGGER_SLOPE attribute.
+
+Defined Values:
+  IVISCOPE_VAL_AC_LINE_POSITIVE - Positive crossing
+  IVISCOPE_VAL_AC_LINE_NEGATIVE - Negative crossing
+  IVISCOPE_VAL_AC_LINE_EITHER   - Either crossing
+
+Default value: IVISCOPE_VAL_AC_LINE_POSITIVE
+
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_AcquisistionStartTime" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify the length of time from the trigger event to the first point in the waveform record. If this value is positive, the first point in the waveform record occurs after the trigger event. If this value is negative, the first point in the waveform record occurs before the trigger event.
+The driver uses this value to set the IviScope&gt;&gt;Acquisition&gt;&gt;Acquisition Start Time property. 
+
+Units: seconds
+
+Default Value: 0.0 s</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_AcquisistionStatus" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Returns the acquisition status of the oscilloscope.  Possible values that this parameter returns are:
+
+- IVISCOPE_VAL_ACQ_IN_PROGRESS (0) - The oscilloscope is currently acquiring a waveform.
+
+- IVISCOPE_VAL_ACQ_COMPLETE (1) - The acquisition is complete.
+
+- IVISCOPE_VAL_ACQ_STATE_UNKNOWN (-1) - The driver cannot determine the status of the acquisition.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_AcqusistionType" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify the manner in which you want the oscilloscope to acquire data and fill the waveform record. The driver sets the IviScope&gt;&gt;Acquisition&gt;&gt;Acquisition Type to this value. 
+
+Defined Values:
+- IVISCOPE_VAL_NORMAL - Sets the oscilloscope to the 
+  normal acquisition mode. The oscilloscope acquires one 
+  sample for each point in the waveform record. 
+  The oscilloscope can use real-time or equivalent-time
+  sampling.
+
+- IVISCOPE_VAL_PEAK_DETECT - Sets the oscilloscope
+  to the peak-detect acquisition mode. The oscilloscope
+  oversamples the input signal and keeps the minimum
+  and maximum values that correspond to each position
+  in the waveform record. The oscilloscope uses only
+  real-time sampling.
+
+- IVISCOPE_VAL_HI_RES - Sets the oscilloscope to
+  the high-resolution acquisition mode. The oscilloscope
+  oversamples the input signal and calculates an average
+  value for each position in the waveform record.
+  The oscilloscope uses only real-time sampling.
+
+- IVISCOPE_VAL_ENVELOPE - Sets the oscilloscope
+  to the envelope acquisition mode. The oscilloscope
+  acquires multiple waveforms and keeps the minimum
+  and maximum voltages it acquires for each point in
+  the waveform record. You specify the number of
+  waveforms the oscilloscope acquires with the
+  IviScope Configure Number of Envelopes[MmW] VI.
+ The oscilloscope can use real-time or equivalent-time sampling.
+
+ - IVISCOPE_VAL_AVERAGE - Sets the oscilloscope to
+  the average acquisition mode. The oscilloscope acquires
+  multiple waveforms and calculates an average value for
+  each point in the waveform record. You specify the
+  number of  waveforms the oscilloscope acquires with
+  the IviScope Configure Number of Averages [AA] VI.
+  The oscilloscope can use real-time or equivalent-time
+  sampling.
+
+Default value: IVISCOPE_VAL_NORMAL
+
+Note: 	When you set this parameter to IVISCOPE_VAL_ENVELOPE or IVISCOPE_VAL_PEAK_DETECT, the oscilloscope acquires minimum and maximum waveforms. To retrieve the minimum and maximum waveforms, use the IviScope Read Min Max Waveform [MmW] and IviScope Fetch Min Max Waveform [MmW] VIs.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ActualRecordLength" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the minimum number of points you require in the waveform record for each channel.  The driver sets the  IviScope&gt;&gt;Acquisition&gt;&gt;Horizontal Minimum Number of Points property to this value and configures the record length that the oscilloscope uses for waveform acquisition.  Call the IviScope Actual Record Length VI to obtain the actual record length.
+
+Default Value: 100 samples
+
+Notes:
+
+(1) The oscilloscope may use records of different size depending on the acquisition type.  You specify the acquisition with the IviScope Configure Acquisition Type VI.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">100</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ActualSampleMode" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Returns the sample mode the oscilloscope is currently using.  The driver returns the value of the IviScope&gt;&gt;Acquisition&gt;&gt;Sample Mode [SM] property. 
+
+Defined Values:
+- IVISCOPE_VAL_REAL_TIME (0) - Indicates that the oscilloscope is using real-time sampling.
+
+- IVISCOPE_VAL_EQUIVALENT_TIME (1) - Indicates that the oscilloscope is using equivalent-time sampling.
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ActualSampleRate" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Returns the effective sample rate of the acquired waveform the oscilloscope acquires for each channel. 
+The driver returns the value of the IviScope&gt;&gt;Acquisition&gt;&gt;Horizontal Sample Rate property.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ActualTimeIncrement" Type="Variable">
+			<Property Name="Description:Description" Type="Str"></Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ChannelEnabled_0" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify whether you want the oscilloscope to acquire a waveform for the channel when you call the  IviScope Initiate Acquisition, IviScope Read Waveform, IviScope Read Min Max Waveform [MmW], or IviScope Read Waveform Measurement [WM] VI.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Channel Enabled property to this value. 
+ 
+Default Value: TRUE
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">False</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"1!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ChannelEnabled_1" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify whether you want the oscilloscope to acquire a waveform for the channel when you call the  IviScope Initiate Acquisition, IviScope Read Waveform, IviScope Read Min Max Waveform [MmW], or IviScope Read Waveform Measurement [WM] VI.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Channel Enabled property to this value. 
+ 
+Default Value: TRUE
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">False</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"1!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ChannelEnabled_2" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify whether you want the oscilloscope to acquire a waveform for the channel when you call the  IviScope Initiate Acquisition, IviScope Read Waveform, IviScope Read Min Max Waveform [MmW], or IviScope Read Waveform Measurement [WM] VI.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Channel Enabled property to this value. 
+ 
+Default Value: TRUE
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">False</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"1!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ChannelEnabled_3" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify whether you want the oscilloscope to acquire a waveform for the channel when you call the  IviScope Initiate Acquisition, IviScope Read Waveform, IviScope Read Min Max Waveform [MmW], or IviScope Read Waveform Measurement [WM] VI.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Channel Enabled property to this value. 
+ 
+Default Value: TRUE
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">False</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"1!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ContinousAcquisistion" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specifies whether you want to enable continuous acquisition on the oscilloscope. The driver uses this value to set the IviScope&gt;&gt;Acquisition&gt;&gt;Initiate Continuous [CA] property.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">False</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!B(1!!!"1!A!!!!!!"!!R!)1&gt;#&lt;W^M:7&amp;O!!%!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_DriverRevision" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!I*!!!!"1!A!!!!!!"!""!-0````]'5X2S;7ZH!!!"!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ErrorCode" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ErrorMessage" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!I*!!!!"1!A!!!!!!"!""!-0````]'5X2S;7ZH!!!"!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_FirmwareRevision" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!I*!!!!"1!A!!!!!!"!""!-0````]'5X2S;7ZH!!!"!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_GlitchCondition" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the glitch condition. 
+The driver uses this value to set the IviScope&gt;&gt;Trigger&gt;&gt;Glitch Triggering [GT]&gt;&gt;Glitch Condition [GT] property.The oscilloscope triggers when it detects a pulse with a width less than or greater than this value, depending on this parameter.
+
+Defined Values:
+
+- IVISCOPE_VAL_GLITCH_LESS_THAN
+     The oscilloscope triggers when the pulse width is less than the
+     Glitch Width.
+- IVISCOPE_VAL_GLITCH_GREATER_THAN 
+     The oscilloscope triggers when the pulse width is
+     greater than the Glitch Width.
+
+Default Value: IVISCOPE_VAL_GLITCH_LESS_THAN</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_GlitchPolarity" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the polarity of the glitch that you want to trigger the oscilloscope. 
+The driver sets the IviScope&gt;&gt;Trigger&gt;&gt;Glitch Triggering [GT]&gt;&gt;Glitch Polarity [GT] property to this value.
+
+Defined Values:
+
+- IVISCOPE_VAL_GLITCH_POSITIVE 
+      The oscilloscope triggers on a positive glitch.
+- IVISCOPE_VAL_GLITCH_NEGATIVE 
+      The oscilloscope triggers on a negative glitch.
+- IVISCOPE_VAL_GLITCH_EITHER
+      The oscilloscope triggers on either a positive or negative glitch.
+
+Default Value: IVISCOPE_VAL_GLITCH_POSITIVE</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_GlitchWidth" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the length of time you want the oscilloscope to use for the glitch width. The driver sets the IviScope&gt;&gt;Trigger&gt;&gt;Glitch Triggering [GT]&gt;&gt;Glitch Width [GT] property to this value.The oscilloscope triggers when it detects a pulse with a width less than or greater than this value, depending on the Glitch Condition parameter.
+
+Units: seconds
+
+Default value: 0.000010</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1e-05</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_HighReference" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the high reference you want the oscilloscope to use for waveform measurements.  The driver sets the IviScope&gt;&gt;Waveform Measurement&gt;&gt;Measurement High Reference [WM] property to this value.
+
+Units:  A percentage of the difference between the Voltage High and Voltage Low.
+
+Default Value:  None
+
+Notes:
+
+(1) The oscilloscope calculates the Voltage High and the Voltage Low using either the min/max or histogram methods.  The min/max method uses the maximum and minimum values found.  The histogram method uses the most common values found above and below the middle of the waveform.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0.9</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_InputImpedance_0" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the input impedance you want to use for the channel. The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Input Impedance to this value.
+
+Units: ohms
+
+Default Value: 1.0E+06 ohms</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1000000</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_InputImpedance_1" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the input impedance you want to use for the channel. The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Input Impedance to this value.
+
+Units: ohms
+
+Default Value: 1.0E+06 ohms</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1000000</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_InputImpedance_2" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the input impedance you want to use for the channel. The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Input Impedance to this value.
+
+Units: ohms
+
+Default Value: 1.0E+06 ohms</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1000000</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_InputImpedance_3" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the input impedance you want to use for the channel. The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Input Impedance to this value.
+
+Units: ohms
+
+Default Value: 1.0E+06 ohms</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1000000</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_InterpolationMethod" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the interpolation method you want the oscilloscope to 
+use when it cannot sample a voltage for a point in the waveform record.  The driver sets the IviScope&gt;&gt;Acquisition&gt;&gt;Interpolation [I] property to this value.
+
+
+Defined Values:
+  IVISCOPE_VAL_NO_INTERPOLATION - No interpolation
+  IVISCOPE_VAL_SINE_X           - sin(x)/x interpolation
+  IVISCOPE_VAL_LINEAR           - Linear interpolation
+  
+Default value:  IVISCOPE_VAL_SINE_X
+
+Notes:
+
+(1)  IVISCOPE_VAL_NO_INTERPOLATION - The oscilloscope does not interpolate any points in the waveform.  
+Instead, the driver sets every element in the waveform array for which the oscilloscope cannot sample a value to an IEEE 754 - defined Nan (Not a Number) value.
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_LowReference" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the low reference you want the oscilloscope to use for waveform measurements.  The driver sets the IviScope&gt;&gt;Waveform Measurement&gt;&gt;Measurement Low Reference [WM] property to this value.
+
+Units:  A percentage of the difference between the Voltage High and Voltage Low.
+
+Default Value:  10.0%
+
+Notes:
+
+(1) The oscilloscope calculates the Voltage High and the Voltage Low using either the min/max or histogram methods.  The min/max method uses the maximum and minimum values found.  The histogram method uses the most common values found above and below the middle of the waveform.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0.1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_MaxInputFrequency_0" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the maximum frequency for the input signal you want the instrument to accommodate without attenuating it by more than 3dB. The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Maximum Input Frequency to this value. 
+
+Units:  hertz.
+
+Default value:  1.0E+6 Hz</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1000000</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_MaxInputFrequency_1" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the maximum frequency for the input signal you want the instrument to accommodate without attenuating it by more than 3dB. The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Maximum Input Frequency to this value. 
+
+Units:  hertz.
+
+Default value:  1.0E+6 Hz</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1000000</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_MaxInputFrequency_2" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the maximum frequency for the input signal you want the instrument to accommodate without attenuating it by more than 3dB. The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Maximum Input Frequency to this value. 
+
+Units:  hertz.
+
+Default value:  1.0E+6 Hz</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1000000</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_MaxInputFrequency_3" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the maximum frequency for the input signal you want the instrument to accommodate without attenuating it by more than 3dB. The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Maximum Input Frequency to this value. 
+
+Units:  hertz.
+
+Default value:  1.0E+6 Hz</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1000000</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_MeasurementDone" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network,Initial Value</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_MidReference" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the mid reference you want the oscilloscope to use for waveform measurements.  The driver sets the IviScope&gt;&gt;Waveform Measurement&gt;&gt;Measurement Mid Reference [WM] property to this value.
+
+Units:  A percentage of the difference between the Voltage High and Voltage Low.
+
+Default Value:  50.0%
+
+Notes:
+
+(1) The oscilloscope calculates the Voltage High and the Voltage Low using either the min/max or histogram methods.  The min/max method uses the maximum and minimum values found.  The histogram method uses the most common values found above and below the middle of the waveform.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0.5</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_MinRecordLength" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network,Initial Value</Property>
+			<Property Name="Initial Value:Value" Type="Str">500</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_NumberOfAverages" Type="Variable">
+			<Property Name="Description:Description" Type="Str">When you set the acquisition type to IVISCOPE_VAL_AVERAGE, the oscilloscope acquires multiple waveforms.  After each waveform acquisition, the oscilloscope keeps the average value of all acquisitions for each element in the waveform record.  This parameter specifies the number of waveforms the oscilloscope acquires and averages.  The driver sets the IviScope&gt;&gt;Acquisition&gt;&gt;Number of Averages [AA] property to this value.  
+
+After the oscilloscope acquires as many waveforms as you specify, it returns to the idle state. 
+
+Default value: 8
+
+Notes:
+
+(1) This parameter affects instrument behavior only when the Acquisition Type is set to IVISCOPE_VAL_AVERAGE.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">8</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_NumberOfEnvelopes" Type="Variable">
+			<Property Name="Description:Description" Type="Str">When you set the acquisition type to IVISCOPE_VAL_ENVELOPE, the oscilloscope acquires multiple waveforms. After each waveform acquisition, the oscilloscope keeps the minimum and maximum values it finds for each point in the waveform record. This parameter specifies the number of waveforms the oscilloscope acquires and analyzes to create the minimum and maximum waveforms. The driver sets the IviScope&gt;&gt;Acquisition&gt;&gt;Number of Envelopes [MmW] property to this value. 
+
+Default Value: 8
+
+Note	This parameter affects instrument behavior only when the acquisition type is set to IVISCOPE_VAL_ENVELOPE.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">8</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ProbeAttenuation_0" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the scaling factor by which the probe you attach to the channel attenuates the input.  For example, when you use a 10:1 probe, set this parameter to 10.0.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Probe Attenuation property to this value.
+
+This driver reserves negative values to control the oscilloscope's automatic probe sense capability.  Setting this parameter to IVISCOPE_VAL_PROBE_SENSE_ON (-1)  configures the oscilloscope to sense the attenuation of the probe automatically.  
+
+Defined Values:
+ IVISCOPE_VAL_PROBE_SENSE_ON (-1)  - Enables the oscilloscope's automatic probe sense capability.
+
+Default Value: 1.0
+
+Notes:
+
+(1) If the oscilloscope is set to sense the probe attenuation automatically, setting this parameter to a positive value disables the automatic probe sense and configures the oscilloscope to use the manual probe attenuation you specify.
+
+(2) If you use a manual probe attenuation, you must set the probe attenuation to reflect the new probe attenuation each time you attach a different probe.
+
+(3) Use the IviScope Auto Probe Sense Value [PAS] VI to obtain the actual probe attenuation while the automatic probe sense capability is enabled.
+
+(4) If you set the oscilloscope to sense the probe attenuation automatically, the probe attenuation value can change at any time.  When the oscilloscope detects a new probe attenuation value, other settings in the oscilloscope might also change.  The driver has no way of knowing when these changes occur.  Therefore, when you enable the automatic probe sense capability, this driver disables caching for properties that depend on the probe attenuation.  These properties include IviScope&gt;&gt;Channel&gt;&gt;Vertical Range, IviScope&gt;&gt;Channel&gt;&gt;Vertical Offset, and all the properties that configure trigger levels.  To maximize performance, set this parameter to a manual probe attenuation setting.
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ProbeAttenuation_1" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the scaling factor by which the probe you attach to the channel attenuates the input.  For example, when you use a 10:1 probe, set this parameter to 10.0.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Probe Attenuation property to this value.
+
+This driver reserves negative values to control the oscilloscope's automatic probe sense capability.  Setting this parameter to IVISCOPE_VAL_PROBE_SENSE_ON (-1)  configures the oscilloscope to sense the attenuation of the probe automatically.  
+
+Defined Values:
+ IVISCOPE_VAL_PROBE_SENSE_ON (-1)  - Enables the oscilloscope's automatic probe sense capability.
+
+Default Value: 1.0
+
+Notes:
+
+(1) If the oscilloscope is set to sense the probe attenuation automatically, setting this parameter to a positive value disables the automatic probe sense and configures the oscilloscope to use the manual probe attenuation you specify.
+
+(2) If you use a manual probe attenuation, you must set the probe attenuation to reflect the new probe attenuation each time you attach a different probe.
+
+(3) Use the IviScope Auto Probe Sense Value [PAS] VI to obtain the actual probe attenuation while the automatic probe sense capability is enabled.
+
+(4) If you set the oscilloscope to sense the probe attenuation automatically, the probe attenuation value can change at any time.  When the oscilloscope detects a new probe attenuation value, other settings in the oscilloscope might also change.  The driver has no way of knowing when these changes occur.  Therefore, when you enable the automatic probe sense capability, this driver disables caching for properties that depend on the probe attenuation.  These properties include IviScope&gt;&gt;Channel&gt;&gt;Vertical Range, IviScope&gt;&gt;Channel&gt;&gt;Vertical Offset, and all the properties that configure trigger levels.  To maximize performance, set this parameter to a manual probe attenuation setting.
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ProbeAttenuation_2" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the scaling factor by which the probe you attach to the channel attenuates the input.  For example, when you use a 10:1 probe, set this parameter to 10.0.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Probe Attenuation property to this value.
+
+This driver reserves negative values to control the oscilloscope's automatic probe sense capability.  Setting this parameter to IVISCOPE_VAL_PROBE_SENSE_ON (-1)  configures the oscilloscope to sense the attenuation of the probe automatically.  
+
+Defined Values:
+ IVISCOPE_VAL_PROBE_SENSE_ON (-1)  - Enables the oscilloscope's automatic probe sense capability.
+
+Default Value: 1.0
+
+Notes:
+
+(1) If the oscilloscope is set to sense the probe attenuation automatically, setting this parameter to a positive value disables the automatic probe sense and configures the oscilloscope to use the manual probe attenuation you specify.
+
+(2) If you use a manual probe attenuation, you must set the probe attenuation to reflect the new probe attenuation each time you attach a different probe.
+
+(3) Use the IviScope Auto Probe Sense Value [PAS] VI to obtain the actual probe attenuation while the automatic probe sense capability is enabled.
+
+(4) If you set the oscilloscope to sense the probe attenuation automatically, the probe attenuation value can change at any time.  When the oscilloscope detects a new probe attenuation value, other settings in the oscilloscope might also change.  The driver has no way of knowing when these changes occur.  Therefore, when you enable the automatic probe sense capability, this driver disables caching for properties that depend on the probe attenuation.  These properties include IviScope&gt;&gt;Channel&gt;&gt;Vertical Range, IviScope&gt;&gt;Channel&gt;&gt;Vertical Offset, and all the properties that configure trigger levels.  To maximize performance, set this parameter to a manual probe attenuation setting.
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ProbeAttenuation_3" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the scaling factor by which the probe you attach to the channel attenuates the input.  For example, when you use a 10:1 probe, set this parameter to 10.0.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Probe Attenuation property to this value.
+
+This driver reserves negative values to control the oscilloscope's automatic probe sense capability.  Setting this parameter to IVISCOPE_VAL_PROBE_SENSE_ON (-1)  configures the oscilloscope to sense the attenuation of the probe automatically.  
+
+Defined Values:
+ IVISCOPE_VAL_PROBE_SENSE_ON (-1)  - Enables the oscilloscope's automatic probe sense capability.
+
+Default Value: 1.0
+
+Notes:
+
+(1) If the oscilloscope is set to sense the probe attenuation automatically, setting this parameter to a positive value disables the automatic probe sense and configures the oscilloscope to use the manual probe attenuation you specify.
+
+(2) If you use a manual probe attenuation, you must set the probe attenuation to reflect the new probe attenuation each time you attach a different probe.
+
+(3) Use the IviScope Auto Probe Sense Value [PAS] VI to obtain the actual probe attenuation while the automatic probe sense capability is enabled.
+
+(4) If you set the oscilloscope to sense the probe attenuation automatically, the probe attenuation value can change at any time.  When the oscilloscope detects a new probe attenuation value, other settings in the oscilloscope might also change.  The driver has no way of knowing when these changes occur.  Therefore, when you enable the automatic probe sense capability, this driver disables caching for properties that depend on the probe attenuation.  These properties include IviScope&gt;&gt;Channel&gt;&gt;Vertical Range, IviScope&gt;&gt;Channel&gt;&gt;Vertical Offset, and all the properties that configure trigger levels.  To maximize performance, set this parameter to a manual probe attenuation setting.
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_ResourceName" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Initial Value:Value" Type="Str"></Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!I*!!!!"1!A!!!!!!"!""!-0````]'5X2S;7ZH!!!"!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_RuntHighThreshold" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_RuntLowThreshold" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_SelftestResultCode" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_SelftestResultMessage" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!I*!!!!"1!A!!!!!!"!""!-0````]'5X2S;7ZH!!!"!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TimePerRecord" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the time in seconds that corresponds to the record length.  The driver sets the IviScope&gt;&gt;Acquisition&gt;&gt;Horizontal Time Per Record property to this value.
+
+Units: seconds
+
+Default Value: 1.0E-3 s</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TriggerCoupling" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the trigger coupling.  The driver uses this value to set the IviScope&gt;&gt;Trigger&gt;&gt;Trigger Coupling property. 
+
+Defined Values:
+
+- IVISCOPE_VAL_AC - The oscilloscope AC couples the trigger
+                    signal.
+
+- IVISCOPE_VAL_DC - The oscilloscope DC couples the trigger
+                    signal.
+
+- IVISCOPE_VAL_LF_REJECT - The oscilloscope filters out the low
+                           frequencies from the trigger signal.
+
+- IVISCOPE_VAL_HF_REJECT - The oscilloscope filters out the high
+                           frequencies from the trigger signal.
+
+- IVISCOPE_VAL_NOISE_REJECT - The oscilloscope filters out the
+                              noise from the trigger signal.
+
+Default Value: IVISCOPE_VAL_DC
+
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TriggerHoldoff" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the length of time you want the oscilloscope to wait after it detects a trigger until the oscilloscope enables the trigger subsystem to detect another trigger. The driver sets the IviScope&gt;&gt;Trigger&gt;&gt;Trigger Holdoff property to this value.
+
+This parameter affects instrument operation only when the oscilloscope requires multiple acquisitions to build a complete waveform. The oscilloscope requires multiple waveform acquisitions when it uses equivalent-time sampling or when you set the acquisition type to envelope or average.
+
+Units: seconds
+
+Default Value: 500.0E-9 s (500 ns)</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">5e-09</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TriggerLevel" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the voltage threshold you want the oscilloscope to use for edge triggering. 
+The driver sets the IviScope&gt;&gt;Trigger&gt;&gt;Trigger Level property to this value.
+The oscilloscope triggers when the trigger signal passes through the threshold you specify with this parameter and has the slope you specify with the Trigger Slope parameter.
+
+Units: volts
+
+Default value: 0.0
+
+Note	This parameter affects instrument behavior only when you select a channel or the external trigger input as the Trigger Source. You may not configure the trigger level that the oscilloscope uses for other trigger sources, such as VXI TTL trigger lines.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TriggerModifier" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the trigger modifier. The driver uses this value to set the IviScope&gt;&gt;Trigger&gt;&gt;Trigger Modifier [TM] property. 
+
+Defined Values:
+
+- IVISCOPE_VAL_NO_TRIGGER_MOD 
+  The oscilloscope waits until the trigger you specify occurs.
+
+- IVISCOPE_VAL_AUTO
+  The oscilloscope automatically triggers if the trigger
+  you specify does not occur within the oscilloscope's
+  timeout period.
+
+- IVISCOPE_VAL_AUTO_LEVEL
+  The oscilloscope adjusts the trigger level if the trigger
+  you specify does not occur.
+
+Default Value: IVISCOPE_VAL_NO_TRIGGER_MOD</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TriggerSlope" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify whether you want a rising edge or a falling edge passing through the Trigger Level to trigger the oscilloscope. 
+The driver sets the IviScope&gt;&gt;Trigger&gt;&gt;Trigger Slope property to this value.
+
+Defined Values:
+
+  IVISCOPE_VAL_POSITIVE - Rising edge
+  IVISCOPE_VAL_NEGATIVE - Falling edge
+
+Default value: IVISCOPE_VAL_POSITIVE</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TriggerSource" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the source you want the oscilloscope to monitor for a trigger. The driver sets the IviScope&gt;&gt;Trigger&gt;&gt;Trigger Source property to this value.
+After you call one of the IviScope Read Waveform, IviScope Read Min Max Waveform [MmW], IviScope Read Waveform Measurement [WM], or IviScope Initiate Acquisition VIs, the oscilloscope waits for the trigger from the source you specify in this parameter.
+
+This control accepts one of the valid channel names or additional trigger sources listed below. Virtual channel names are aliases for instrument-specific channel strings. The instrument-specific channel strings can differ from one instrument to another. Virtual channel names allow you to use and swap instruments without having to change the channel names in your source code. You assign a virtual channel name to an instrument-specific channel through the Configuration Utility. This control accepts virtual channel names you have assigned to the specific instrument you are using. It also accepts the instrument-specific channel names.
+
+Additional Trigger Sources:
+   IVISCOPE_VAL_EXTERNAL - External
+   IVISCOPE_VAL_TTL0 - PXI TRIG0 or VXI TTL0
+   IVISCOPE_VAL_TTL1 - PXI TRIG1 or VXI TTL1
+   IVISCOPE_VAL_TTL2 - PXI TRIG2 or VXI TTL2
+   IVISCOPE_VAL_TTL3 - PXI TRIG3 or VXI TTL3
+   IVISCOPE_VAL_TTL4 - PXI TRIG4 or VXI TTL4
+   IVISCOPE_VAL_TTL5 - PXI TRIG5 or VXI TTL5
+   IVISCOPE_VAL_TTL6 - PXI TRIG6 or VXI TTL6
+   IVISCOPE_VAL_TTL7 - PXI TRIG7 or VXI TTL7
+   IVISCOPE_VAL_ECL0 - VXI ECL0
+   IVISCOPE_VAL_ECL1 - VXI ECL1
+   IVISCOPE_VAL_PXI_STAR - PXI Star
+   IVISCOPE_VAL_RTSI_0 - RTSI line 0
+   IVISCOPE_VAL_RTSI_1 - RTSI line 1
+   IVISCOPE_VAL_RTSI_2 - RTSI line 2
+   IVISCOPE_VAL_RTSI_3 - RTSI line 3
+   IVISCOPE_VAL_RTSI_4 - RTSI line 4
+   IVISCOPE_VAL_RTSI_5 - RTSI line 5
+   IVISCOPE_VAL_RTSI_6 - RTSI line 6
+
+Note:	IVISCOPE_VAL_EXTERNAL - The oscilloscope waits for a trigger on the external trigger input.
+
+Default Value: "CHANNEL1"</Property>
+			<Property Name="featurePacks" Type="Str">Network,Description</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!I*!!!!"1!A!!!!!!"!""!-0````]'5X2S;7ZH!!!"!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TriggerType" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the type of trigger you want the oscilloscope to use. The driver sets the IviScope&gt;&gt;Trigger&gt;&gt;Trigger Type to this value. 
+
+Defined Values:
+
+- IVISCOPE_VAL_EDGE_TRIGGER 
+  - Configures the oscilloscope for edge triggering. An
+  edge trigger occurs when the trigger signal crosses 
+  the trigger level you specify with the slope you specify.
+  You configure the trigger level and slope with the IviScope
+  Configure Edge Trigger Source VI.
+
+- IVISCOPE_VAL_TV_TRIGGER 
+  - Configures the oscilloscope for TV triggering. You
+  configure the TV signal type, the field and line on
+  which to trigger, and the signal polarity with the
+  IviScope Configure TV Trigger Source [TV] and
+  IviScope Configure TV Trigger Line Number [TV] VIs.
+
+- IVISCOPE_VAL_RUNT_TRIGGER
+  - Configures the oscilloscope  for runt triggering. A runt
+  trigger occurs when the trigger signal crosses one of the
+  runt thresholds twice without crossing the other runt
+  threshold. You configure the runt thresholds and the
+  polarity of the runt with the IviScope Configure Runt
+  Trigger Source [RT] VI.
+
+- IVISCOPE_VAL_GLITCH_TRIGGER
+  - Configures the oscilloscope for glitch triggering. A glitch
+  trigger occurs when the trigger signal has a pulse with a
+  width that is less than the glitch width. The trigger does
+  not actually occur until the edge of the pulse that
+  corresponds to the glitch width and  polarity you specify
+  crosses the trigger level. You configure the glitch width,
+  the polarity of the pulse, and the trigger level with the
+  IviScope Configure Glitch Trigger Source [GT] VI.
+
+- IVISCOPE_VAL_WIDTH_TRIGGER
+  - Configures the oscilloscope for width triggering. A width
+  trigger occurs when the  oscilloscope detects a positive
+  or negative pulse with a width between, or optionally
+  outside, the width thresholds. The  trigger does not
+  actually occur until the edge of a pulse  that corresponds
+  to the width thresholds and polarity you specify crosses
+  the trigger level. You configure the width thresholds,
+  whether to trigger on pulse widths that are within or 
+  outside the width thresholds, the polarity of the pulse, 
+  and the trigger level with the  IviScope Configure Width
+  Trigger Source[WT] VI.
+
+- IVISCOPE_VAL_AC_LINE_TRIGGER
+  - Configures the oscilloscope for AC Line triggering.
+  You configure the slope on which to  trigger with the
+  IviScope Configure AC Line Trigger Slope [AT] VI.
+
+- IVISCOPE_VAL_IMMEDIATE_TRIGGER
+  - Configures the oscilloscope for immediate triggering.
+  The oscilloscope does not wait for trigger of any kind
+  upon initialization.
+
+Default Value: IVISCOPE_VAL_EDGE_TRIGGER
+
+Note	This control configures the type of trigger the oscilloscope uses. After you call this VI, you must call the appropriate trigger configuration VI to completely specify the trigger.</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TVEvent" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TVLineNumber" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TVSignalFormat" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_TVTriggerPolarity" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalCoupling_0" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify how you want the oscilloscope to couple the input signal for the channel.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Vertical Coupling property to this value.
+
+Defined Values:
+  IVISCOPE_VAL_AC - AC Coupling
+  IVISCOPE_VAL_DC - DC Coupling
+  IVISCOPE_VAL_GND - Ground Coupling
+
+Default value: IVISCOPE_VAL_DC
+
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalCoupling_1" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify how you want the oscilloscope to couple the input signal for the channel.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Vertical Coupling property to this value.
+
+Defined Values:
+  IVISCOPE_VAL_AC - AC Coupling
+  IVISCOPE_VAL_DC - DC Coupling
+  IVISCOPE_VAL_GND - Ground Coupling
+
+Default value: IVISCOPE_VAL_DC
+
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalCoupling_2" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify how you want the oscilloscope to couple the input signal for the channel.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Vertical Coupling property to this value.
+
+Defined Values:
+  IVISCOPE_VAL_AC - AC Coupling
+  IVISCOPE_VAL_DC - DC Coupling
+  IVISCOPE_VAL_GND - Ground Coupling
+
+Default value: IVISCOPE_VAL_DC
+
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalCoupling_3" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Specify how you want the oscilloscope to couple the input signal for the channel.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Vertical Coupling property to this value.
+
+Defined Values:
+  IVISCOPE_VAL_AC - AC Coupling
+  IVISCOPE_VAL_DC - DC Coupling
+  IVISCOPE_VAL_GND - Ground Coupling
+
+Default value: IVISCOPE_VAL_DC
+
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">1</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalOffset_0" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the location of the center of the range that you specify with the Vertical Range parameter.  Express the value with respect to ground.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Vertical Offset to this value.
+
+For example, to acquire a sine wave that spans between 0.0 and 10.0 volts, pass 5.0 as the value of this parameter.
+
+Units:  volts
+
+Default value: 0.0</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalOffset_1" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the location of the center of the range that you specify with the Vertical Range parameter.  Express the value with respect to ground.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Vertical Offset to this value.
+
+For example, to acquire a sine wave that spans between 0.0 and 10.0 volts, pass 5.0 as the value of this parameter.
+
+Units:  volts
+
+Default value: 0.0</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalOffset_2" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the location of the center of the range that you specify with the Vertical Range parameter.  Express the value with respect to ground.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Vertical Offset to this value.
+
+For example, to acquire a sine wave that spans between 0.0 and 10.0 volts, pass 5.0 as the value of this parameter.
+
+Units:  volts
+
+Default value: 0.0</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalOffset_3" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the location of the center of the range that you specify with the Vertical Range parameter.  Express the value with respect to ground.  The driver sets the IviScope&gt;&gt;Channel&gt;&gt;Vertical Offset to this value.
+
+For example, to acquire a sine wave that spans between 0.0 and 10.0 volts, pass 5.0 as the value of this parameter.
+
+Units:  volts
+
+Default value: 0.0</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">0</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalRange_0" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the value of the input range the oscilloscope uses for the channel.  The driver sets the IviScope&gt;&gt;Chanel&gt;&gt;Vertical Range property to this value.
+For example, to acquire a sine wave that spans between -5.0 and 5.0 volts, pass 10.0 as the value of this parameter.
+
+Units:  volts
+  
+Default Value: 10.0 V</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">10</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalRange_1" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the value of the input range the oscilloscope uses for the channel.  The driver sets the IviScope&gt;&gt;Chanel&gt;&gt;Vertical Range property to this value.
+For example, to acquire a sine wave that spans between -5.0 and 5.0 volts, pass 10.0 as the value of this parameter.
+
+Units:  volts
+  
+Default Value: 10.0 V</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">10</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalRange_2" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the value of the input range the oscilloscope uses for the channel.  The driver sets the IviScope&gt;&gt;Chanel&gt;&gt;Vertical Range property to this value.
+For example, to acquire a sine wave that spans between -5.0 and 5.0 volts, pass 10.0 as the value of this parameter.
+
+Units:  volts
+  
+Default Value: 10.0 V</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">10</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_VerticalRange_3" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Pass the value of the input range the oscilloscope uses for the channel.  The driver sets the IviScope&gt;&gt;Chanel&gt;&gt;Vertical Range property to this value.
+For example, to acquire a sine wave that spans between -5.0 and 5.0 volts, pass 10.0 as the value of this parameter.
+
+Units:  volts
+  
+Default Value: 10.0 V</Property>
+			<Property Name="featurePacks" Type="Str">Network,Initial Value,Description</Property>
+			<Property Name="Initial Value:Value" Type="Str">10</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_Waveform" Type="Variable">
+			<Property Name="Description:Description" Type="Str">Returns the waveform that the oscilloscope acquires.  
+
+Units:  volts
+
+Notes:
+
+(1) The IviScope Actual Record Length VI returns the number of points the oscilloscope acquires for each channel. 
+
+(2) You configure the interpolation method the oscilloscope uses with the IviScope Configure Interpolation [*] VI.  If you disable interpolation, the oscilloscope does not interpolate points in the waveform.  If the oscilloscope cannot sample a value for a point in the waveform, the driver sets the corresponding element in the Waveform Array to an IEEE defined NaN (Not a Number) value and the VI returns IVISCOPE_WARN_INVALID_WFM_ELEMENT (0x3FFA2001).  
+
+(3) You can test a waveform value for an invalid value condition by calling the IviScope Is Invalid Waveform Element VI.
+</Property>
+			<Property Name="featurePacks" Type="Str">Network,Description</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"34A!!!"1!A!!!!!!#!"2!6!!$$&amp;&gt;B&gt;G6G&lt;X*N)%2#4!!!*E"!!!(`````!!!918*S98EA&lt;W9A2'^V9GRF)&amp;&gt;B&gt;G6G&lt;X*N!!!"!!%!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_WidthCondition" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:ElemSize" Type="Str">1</Property>
+			<Property Name="Network:PointsPerWaveform" Type="Str">1</Property>
+			<Property Name="Network:SingleWriter" Type="Str">False</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_WidthHighThreshold" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_WidthLowThreshold" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!J*1!!!"1!A!!!!!!"!!V!#A!'2'^V9GRF!!!"!!!!!!!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+		<Item Name="myScope_WidthPolarity" Type="Variable">
+			<Property Name="featurePacks" Type="Str">Network</Property>
+			<Property Name="Network:BuffSize" Type="Str">50</Property>
+			<Property Name="Network:UseBinding" Type="Str">False</Property>
+			<Property Name="Network:UseBuffering" Type="Str">False</Property>
+			<Property Name="numTypedefs" Type="UInt">0</Property>
+			<Property Name="Path" Type="Str">/Untitled Project 1/My Computer/CSPP_DeviceBaseSV.lvlib/myScope/</Property>
+			<Property Name="type" Type="Str">Network</Property>
+			<Property Name="typeDesc" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!!D(Q!!!"1!A!!!!!!"!!N!!Q!&amp;37ZU-T)!!1!!!!!!!!!!!!!!!!!!</Property>
+		</Item>
+	</Item>
 </Library>
