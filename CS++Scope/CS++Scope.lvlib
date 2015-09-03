@@ -24,41 +24,47 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 
 </Property>
 	<Item Name="Messages" Type="Folder">
-		<Item Name="Abort Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Abort Msg/Abort Msg.lvclass"/>
-		<Item Name="Acquisition Status Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Acquisition Status Msg/Acquisition Status Msg.lvclass"/>
-		<Item Name="Actual Record Length Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Actual Record Length Msg/Actual Record Length Msg.lvclass"/>
-		<Item Name="Actual Sample Mode [SM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Actual Sample Mode [SM] Msg/Actual Sample Mode [SM] Msg.lvclass"/>
-		<Item Name="Actual Sample Rate Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Actual Sample Rate Msg/Actual Sample Rate Msg.lvclass"/>
-		<Item Name="Auto Probe Sense Value [PAS] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Auto Probe Sense Value [PAS] Msg/Auto Probe Sense Value [PAS] Msg.lvclass"/>
-		<Item Name="Auto Setup Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Auto Setup Msg/Auto Setup Msg.lvclass"/>
-		<Item Name="Configure AC Line Trigger Slope [AT] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure AC Line Trigger Slope [AT] Msg/Configure AC Line Trigger Slope [AT] Msg.lvclass"/>
-		<Item Name="Configure Acquisition Record Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Acquisition Record Msg/Configure Acquisition Record Msg.lvclass"/>
-		<Item Name="Configure Acquisition Type Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Acquisition Type Msg/Configure Acquisition Type Msg.lvclass"/>
-		<Item Name="Configure Channel Characteristics Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Channel Characteristics Msg/Configure Channel Characteristics Msg.lvclass"/>
-		<Item Name="Configure Channel Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Channel Msg/Configure Channel Msg.lvclass"/>
-		<Item Name="Configure Edge Trigger Source Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Edge Trigger Source Msg/Configure Edge Trigger Source Msg.lvclass"/>
-		<Item Name="Configure Glitch Trigger Source [GT] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Glitch Trigger Source [GT] Msg/Configure Glitch Trigger Source [GT] Msg.lvclass"/>
-		<Item Name="Configure Initiate Continous [CA] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Initiate Continous [CA] Msg/Configure Initiate Continous [CA] Msg.lvclass"/>
-		<Item Name="Configure Interpolation [I] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Interpolation [I] Msg/Configure Interpolation [I] Msg.lvclass"/>
-		<Item Name="Configure Number of Averages [AA] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Number of Averages [AA] Msg/Configure Number of Averages [AA] Msg.lvclass"/>
-		<Item Name="Configure Number of Envelopes [MmW] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Number of Envelopes [MmW] Msg/Configure Number of Envelopes [MmW] Msg.lvclass"/>
-		<Item Name="Configure Reference Levels [WM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Reference Levels [WM] Msg/Configure Reference Levels [WM] Msg.lvclass"/>
-		<Item Name="Configure Runt Trigger Source [RT] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Runt Trigger Source [RT] Msg/Configure Runt Trigger Source [RT] Msg.lvclass"/>
-		<Item Name="Configure Trigger Coupling Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Trigger Coupling Msg/Configure Trigger Coupling Msg.lvclass"/>
-		<Item Name="Configure Trigger Modifier [TM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Trigger Modifier [TM] Msg/Configure Trigger Modifier [TM] Msg.lvclass"/>
-		<Item Name="Configure Trigger Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Trigger Msg/Configure Trigger Msg.lvclass"/>
-		<Item Name="Configure TV Trigger Line Number [TV] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure TV Trigger Line Number [TV] Msg/Configure TV Trigger Line Number [TV] Msg.lvclass"/>
-		<Item Name="Configure TV Trigger Source [TV] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure TV Trigger Source [TV] Msg/Configure TV Trigger Source [TV] Msg.lvclass"/>
-		<Item Name="Configure Width Trigger Source [WT] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Width Trigger Source [WT] Msg/Configure Width Trigger Source [WT] Msg.lvclass"/>
-		<Item Name="Fetch Min Max Waveform [MmW] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Fetch Min Max Waveform [MmW] Msg/Fetch Min Max Waveform [MmW] Msg.lvclass"/>
-		<Item Name="Fetch Waveform Measurement [WM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Fetch Waveform Measurement [WM] Msg/Fetch Waveform Measurement [WM] Msg.lvclass"/>
-		<Item Name="Fetch Waveform Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Fetch Waveform Msg/Fetch Waveform Msg.lvclass"/>
-		<Item Name="Get Channel Name Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Get Channel Name Msg/Get Channel Name Msg.lvclass"/>
-		<Item Name="Initiate Acquisition Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Initiate Acquisition Msg/Initiate Acquisition Msg.lvclass"/>
-		<Item Name="Invalidate All Attributes Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Invalidate All Attributes Msg/Invalidate All Attributes Msg.lvclass"/>
-		<Item Name="Is Invalid Waveform Element Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Is Invalid Waveform Element Msg/Is Invalid Waveform Element Msg.lvclass"/>
-		<Item Name="Read Min Max Waveform [MmW] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Read Min Max Waveform [MmW] Msg/Read Min Max Waveform [MmW] Msg.lvclass"/>
-		<Item Name="Read Waveform Measurement [WM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Read Waveform Measurement [WM] Msg/Read Waveform Measurement [WM] Msg.lvclass"/>
+		<Item Name="Configuration" Type="Folder">
+			<Item Name="Actual Record Length Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Actual Record Length Msg/Actual Record Length Msg.lvclass"/>
+			<Item Name="Actual Sample Mode [SM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Actual Sample Mode [SM] Msg/Actual Sample Mode [SM] Msg.lvclass"/>
+			<Item Name="Actual Sample Rate Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Actual Sample Rate Msg/Actual Sample Rate Msg.lvclass"/>
+			<Item Name="Auto Probe Sense Value [PAS] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Auto Probe Sense Value [PAS] Msg/Auto Probe Sense Value [PAS] Msg.lvclass"/>
+			<Item Name="Auto Setup Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Auto Setup Msg/Auto Setup Msg.lvclass"/>
+			<Item Name="Configure AC Line Trigger Slope [AT] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure AC Line Trigger Slope [AT] Msg/Configure AC Line Trigger Slope [AT] Msg.lvclass"/>
+			<Item Name="Configure Acquisition Record Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Acquisition Record Msg/Configure Acquisition Record Msg.lvclass"/>
+			<Item Name="Configure Acquisition Type Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Acquisition Type Msg/Configure Acquisition Type Msg.lvclass"/>
+			<Item Name="Configure Channel Characteristics Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Channel Characteristics Msg/Configure Channel Characteristics Msg.lvclass"/>
+			<Item Name="Configure Channel Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Channel Msg/Configure Channel Msg.lvclass"/>
+			<Item Name="Configure Edge Trigger Source Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Edge Trigger Source Msg/Configure Edge Trigger Source Msg.lvclass"/>
+			<Item Name="Configure Glitch Trigger Source [GT] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Glitch Trigger Source [GT] Msg/Configure Glitch Trigger Source [GT] Msg.lvclass"/>
+			<Item Name="Configure Initiate Continous [CA] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Initiate Continous [CA] Msg/Configure Initiate Continous [CA] Msg.lvclass"/>
+			<Item Name="Configure Interpolation [I] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Interpolation [I] Msg/Configure Interpolation [I] Msg.lvclass"/>
+			<Item Name="Configure Number of Averages [AA] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Number of Averages [AA] Msg/Configure Number of Averages [AA] Msg.lvclass"/>
+			<Item Name="Configure Number of Envelopes [MmW] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Number of Envelopes [MmW] Msg/Configure Number of Envelopes [MmW] Msg.lvclass"/>
+			<Item Name="Configure Reference Levels [WM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Reference Levels [WM] Msg/Configure Reference Levels [WM] Msg.lvclass"/>
+			<Item Name="Configure Runt Trigger Source [RT] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Runt Trigger Source [RT] Msg/Configure Runt Trigger Source [RT] Msg.lvclass"/>
+			<Item Name="Configure Trigger Coupling Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Trigger Coupling Msg/Configure Trigger Coupling Msg.lvclass"/>
+			<Item Name="Configure Trigger Modifier [TM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Trigger Modifier [TM] Msg/Configure Trigger Modifier [TM] Msg.lvclass"/>
+			<Item Name="Configure Trigger Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Trigger Msg/Configure Trigger Msg.lvclass"/>
+			<Item Name="Configure TV Trigger Line Number [TV] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure TV Trigger Line Number [TV] Msg/Configure TV Trigger Line Number [TV] Msg.lvclass"/>
+			<Item Name="Configure TV Trigger Source [TV] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure TV Trigger Source [TV] Msg/Configure TV Trigger Source [TV] Msg.lvclass"/>
+			<Item Name="Configure Width Trigger Source [WT] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Configure Width Trigger Source [WT] Msg/Configure Width Trigger Source [WT] Msg.lvclass"/>
+		</Item>
+		<Item Name="Measurement" Type="Folder">
+			<Item Name="Abort Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Abort Msg/Abort Msg.lvclass"/>
+			<Item Name="Acquisition Status Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Acquisition Status Msg/Acquisition Status Msg.lvclass"/>
+			<Item Name="Fetch Min Max Waveform [MmW] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Fetch Min Max Waveform [MmW] Msg/Fetch Min Max Waveform [MmW] Msg.lvclass"/>
+			<Item Name="Fetch Waveform Measurement [WM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Fetch Waveform Measurement [WM] Msg/Fetch Waveform Measurement [WM] Msg.lvclass"/>
+			<Item Name="Fetch Waveform Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Fetch Waveform Msg/Fetch Waveform Msg.lvclass"/>
+			<Item Name="Initiate Acquisition Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Initiate Acquisition Msg/Initiate Acquisition Msg.lvclass"/>
+			<Item Name="Read Min Max Waveform [MmW] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Read Min Max Waveform [MmW] Msg/Read Min Max Waveform [MmW] Msg.lvclass"/>
+			<Item Name="Read Waveform Measurement [WM] Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Read Waveform Measurement [WM] Msg/Read Waveform Measurement [WM] Msg.lvclass"/>
+		</Item>
+		<Item Name="Utility" Type="Folder">
+			<Item Name="Get Channel Name Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Get Channel Name Msg/Get Channel Name Msg.lvclass"/>
+			<Item Name="Invalidate All Attributes Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Invalidate All Attributes Msg/Invalidate All Attributes Msg.lvclass"/>
+			<Item Name="Is Invalid Waveform Element Msg.lvclass" Type="LVClass" URL="../../CS++Scope Messages/Is Invalid Waveform Element Msg/Is Invalid Waveform Element Msg.lvclass"/>
+		</Item>
 	</Item>
 	<Item Name="CS++Scope.lvclass" Type="LVClass" URL="../CS++Scope.lvclass"/>
 </Library>
