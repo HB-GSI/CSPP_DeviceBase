@@ -53,6 +53,10 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 	<Property Name="Use Data Logging Database" Type="Bool">true</Property>
 	<Item Name="Messages" Type="Folder">
 		<Item Name="Configure" Type="Folder">
+			<Item Name="Information" Type="Folder">
+				<Item Name="Get Aperture Time Info [DT] Msg.lvclass" Type="LVClass" URL="../../CS++DMM Messages/Get Aperture Time Info [DT] Msg/Get Aperture Time Info [DT] Msg.lvclass"/>
+				<Item Name="Get Auto Range Value [ARV] Msg.lvclass" Type="LVClass" URL="../../CS++DMM Messages/Get Auto Range Value [ARV] Msg/Get Auto Range Value [ARV] Msg.lvclass"/>
+			</Item>
 			<Item Name="Multi-Point" Type="Folder">
 				<Item Name="Configure Meas Complete Dest [MP] Msg.lvclass" Type="LVClass" URL="../../CS++DMM Messages/Configure Meas Complete Dest [MP] Msg/Configure Meas Complete Dest [MP] Msg.lvclass"/>
 				<Item Name="Configure Multi-Point [MP] Msg.lvclass" Type="LVClass" URL="../../CS++DMM Messages/Configure Multi-Point [MP] Msg/Configure Multi-Point [MP] Msg.lvclass"/>
