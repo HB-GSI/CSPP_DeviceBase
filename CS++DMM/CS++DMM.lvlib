@@ -96,4 +96,5 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 		</Item>
 	</Item>
 	<Item Name="CS++DMM.lvclass" Type="LVClass" URL="../CS++DMM.lvclass"/>
+	<Item Name="Test DMM-Readout.vi" Type="VI" URL="../Test DMM-Readout.vi"/>
 </Library>
