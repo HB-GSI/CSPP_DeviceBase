@@ -69,7 +69,6 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 	</Item>
 	<Item Name="Actions" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
-		<Item Name="Base" Type="Folder"/>
 		<Item Name="Configuration" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Configure Acquisition Type.vi" Type="VI" URL="../Configure Acquisition Type.vi">
