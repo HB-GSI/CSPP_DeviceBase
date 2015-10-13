@@ -50,7 +50,7 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 	<Property Name="Serialized ACL" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!A1%!!!@````]!!".V&lt;H.J:WZF:#"C?82F)'&amp;S=G&amp;Z!!%!!1!!!!A)!!!!#!!!!!!!!!!</Property>
 	<Property Name="Use Data Logging Database" Type="Bool">true</Property>
 	<Item Name="Messages" Type="Folder">
-		<Item Name="Action/Status" Type="Folder">
+		<Item Name="Action" Type="Folder">
 			<Item Name="Clear Records Msg.lvclass" Type="LVClass" URL="../../CS++MCS Messages/Clear Records Msg/Clear Records Msg.lvclass"/>
 			<Item Name="Read Data Msg.lvclass" Type="LVClass" URL="../../CS++MCS Messages/Read Data Msg/Read Data Msg.lvclass"/>
 			<Item Name="Start Scan Msg.lvclass" Type="LVClass" URL="../../CS++MCS Messages/Start Scan Msg/Start Scan Msg.lvclass"/>
