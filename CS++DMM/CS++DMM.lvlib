@@ -95,6 +95,6 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 			<Item Name="Read Single-Point Msg.lvclass" Type="LVClass" URL="../../CS++DMM Messages/Read Single-Point Msg/Read Single-Point Msg.lvclass"/>
 		</Item>
 	</Item>
+	<Item Name="CS++DMM-Readout.vi" Type="VI" URL="../CS++DMM-Readout.vi"/>
 	<Item Name="CS++DMM.lvclass" Type="LVClass" URL="../CS++DMM.lvclass"/>
-	<Item Name="Test DMM-Readout.vi" Type="VI" URL="../Test DMM-Readout.vi"/>
 </Library>
