@@ -47,19 +47,17 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 	<Property Name="Serialized ACL" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!A1%!!!@````]!!".V&lt;H.J:WZF:#"C?82F)'&amp;S=G&amp;Z!!%!!1!!!!A)!!!!#!!!!!!!!!!</Property>
 	<Property Name="Use Data Logging Database" Type="Bool">true</Property>
 	<Item Name="Messages" Type="Folder">
-		<Item Name="Configuration" Type="Folder">
-			<Item Name="Configure Acceleration Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Configure Acceleration Msg/Configure Acceleration Msg.lvclass"/>
-			<Item Name="Configure RangeMax Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Configure RangeMax Msg/Configure RangeMax Msg.lvclass"/>
-			<Item Name="Configure RangeMin Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Configure RangeMin Msg/Configure RangeMin Msg.lvclass"/>
-			<Item Name="Configure Scaling Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Configure Scaling Msg/Configure Scaling Msg.lvclass"/>
-			<Item Name="Configure StartVelocity Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Configure StartVelocity Msg/Configure StartVelocity Msg.lvclass"/>
-			<Item Name="Configure StopVelocity Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Configure StopVelocity Msg/Configure StopVelocity Msg.lvclass"/>
-		</Item>
 		<Item Name="Movement" Type="Folder">
+			<Item Name="AbortAllMovements Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/AbortAllMovements Msg/AbortAllMovements Msg.lvclass"/>
 			<Item Name="Move Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Move Msg/Move Msg.lvclass"/>
-			<Item Name="MoveAfterReference Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/MoveAfterReference Msg/MoveAfterReference Msg.lvclass"/>
 			<Item Name="ReferenceMove Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/ReferenceMove Msg/ReferenceMove Msg.lvclass"/>
 			<Item Name="StopMovement Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/StopMovement Msg/StopMovement Msg.lvclass"/>
+		</Item>
+		<Item Name="Status" Type="Folder">
+			<Item Name="Update_Error Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Update_Error Msg/Update_Error Msg.lvclass"/>
+			<Item Name="Update_Moving Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Update_Moving Msg/Update_Moving Msg.lvclass"/>
+			<Item Name="Update_RawActPosition Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Update_RawActPosition Msg/Update_RawActPosition Msg.lvclass"/>
+			<Item Name="Update_Referenced Msg.lvclass" Type="LVClass" URL="../../CS++Motor Messages/Update_Referenced Msg/Update_Referenced Msg.lvclass"/>
 		</Item>
 	</Item>
 	<Item Name="CS++Motor.lvclass" Type="LVClass" URL="../CS++Motor.lvclass"/>
