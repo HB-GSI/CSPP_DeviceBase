@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nidocument>
+<nicomment>
+Collection of errors generated within the CS++Core class libraries.
+
+
+
+
+<nifamily familyname="CS++DeviceBase-Errors" displayname="CS++DeviceBase-Errors">
+</nifamily>
+</nicomment>
+<nierror code="-8999">
+CS++MotorBase.lvclass: Critical Error, the Base class tried to send a move command to the motor with a position which is outside the specified range.
+</nierror>
+</nidocument>
