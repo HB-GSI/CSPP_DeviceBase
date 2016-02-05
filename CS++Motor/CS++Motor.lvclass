@@ -209,13 +209,13 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 				<Property Name="NI.ClassItem.State" Type="Int">1351361040</Property>
 			</Item>
 			<Item Name="Initialize Device Core.vi" Type="VI" URL="../Initialize Device Core.vi">
-				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;6!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!D$U.4+SN.&lt;X2P=CZM&gt;GRJ9B&amp;$5SML47^U&lt;X)O&lt;(:D&lt;'&amp;T=Q!.1V-L+UVP&gt;'^S)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!Z!)1F3:8.F&gt;#!I2CE!&amp;E!Q`````QV3:8.P&gt;8*D:3"/97VF!$J!=!!?!!!D$U.4+SN.&lt;X2P=CZM&gt;GRJ9B&amp;$5SML47^U&lt;X)O&lt;(:D&lt;'&amp;T=Q!-1V-L+UVP&gt;'^S)'FO!!"5!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!(!!A!#1-!!(A!!!U)!!!!!!!!!!!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!A!!!))!!!!EA!!!!!"!!I!!!!!</Property>
+				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;6!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!D$U.4+SN.&lt;X2P=CZM&gt;GRJ9B&amp;$5SML47^U&lt;X)O&lt;(:D&lt;'&amp;T=Q!.1V-L+UVP&gt;'^S)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!Z!)1F3:8.F&gt;#!I2CE!&amp;E!Q`````QV3:8.P&gt;8*D:3"/97VF!$J!=!!?!!!D$U.4+SN.&lt;X2P=CZM&gt;GRJ9B&amp;$5SML47^U&lt;X)O&lt;(:D&lt;'&amp;T=Q!-1V-L+UVP&gt;'^S)'FO!!"5!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!(!!A!#1-!!(A!!!U)!!!!!!!!!!!!!)E!!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!A!!!))!!!!EA!!!!!"!!I!!!!!</Property>
 				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 				<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
 				<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 				<Property Name="NI.ClassItem.MethodScope" Type="UInt">3</Property>
 				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-				<Property Name="NI.ClassItem.State" Type="Int">268972560</Property>
+				<Property Name="NI.ClassItem.State" Type="Int">1082135056</Property>
 			</Item>
 			<Item Name="Introspection Core.vi" Type="VI" URL="../Introspection Core.vi">
 				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'(!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$R!=!!?!!!H&amp;5&amp;D&gt;'^S)%:S97VF&gt;W^S;SZM&gt;GRJ9A^.:8.T97&gt;F,GRW9WRB=X-!#U.4+SN.:8.T97&gt;F!"J!1!!"`````Q!&amp;$%.4+SN.:8.T97&gt;F=Q!!/E"Q!"Y!!#-01V-L+UVP&gt;'^S,GRW&lt;'FC%5.4+SN.&lt;X2P=CZM&gt;G.M98.T!!V$5SML47^U&lt;X)A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!/E"Q!"Y!!#-01V-L+UVP&gt;'^S,GRW&lt;'FC%5.4+SN.&lt;X2P=CZM&gt;G.M98.T!!R$5SML47^U&lt;X)A;7Y!!&amp;1!]!!-!!-!"!!'!!=!"!!%!!1!"!!)!!1!"!!*!Q!!?!!!$1A!!!!!!!!*!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!#3!!!!!!%!#A!!!!!</Property>
@@ -253,6 +253,15 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 				<Property Name="NI.ClassItem.State" Type="Int">34078736</Property>
 			</Item>
+		</Item>
+		<Item Name="AxisNo2PhysName.vi" Type="VI" URL="../AxisNo2PhysName.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;L!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"R!-0````]45'BZ=WFD97R$;'&amp;O&lt;G6M4G&amp;N:1![1(!!(A!!)Q^$5SML47^U&lt;X)O&lt;(:M;7)21V-L+UVP&gt;'^S,GRW9WRB=X-!$5.4+SN.&lt;X2P=C"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!21!5!#E&amp;Y;8./&gt;7VC:8)!!$J!=!!?!!!D$U.4+SN.&lt;X2P=CZM&gt;GRJ9B&amp;$5SML47^U&lt;X)O&lt;(:D&lt;'&amp;T=Q!-1V-L+UVP&gt;'^S)'FO!!"B!0!!$!!$!!1!"1!'!!1!"!!%!!1!"Q!%!!A!#1)!!(A!!!U)!!!!!!!!#1!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!)!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!+!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">3</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 		</Item>
 		<Item Name="Configure Acceleration Core.vi" Type="VI" URL="../Configure Acceleration Core.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;6!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!D$U.4+SN.&lt;X2P=CZM&gt;GRJ9B&amp;$5SML47^U&lt;X)O&lt;(:D&lt;'&amp;T=Q!.1V-L+UVP&gt;'^S)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!".!#A!-17.D:7RF=G&amp;U;7^O!!!21!5!#E&amp;Y;8./&gt;7VC:8)!!$J!=!!?!!!D$U.4+SN.&lt;X2P=CZM&gt;GRJ9B&amp;$5SML47^U&lt;X)O&lt;(:D&lt;'&amp;T=Q!-1V-L+UVP&gt;'^S)'FO!!"5!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!(!!A!#1)!!(A!!!U)!!!!!!!!!!!!!)U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!A!!!!)!!!!E!!!!!!"!!I!!!!!</Property>
