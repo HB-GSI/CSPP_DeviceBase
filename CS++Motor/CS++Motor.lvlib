@@ -61,4 +61,5 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 		</Item>
 	</Item>
 	<Item Name="CS++Motor.lvclass" Type="LVClass" URL="../CS++Motor.lvclass"/>
+	<Item Name="Developer-Infos.txt" Type="Document" URL="../Developer-Infos.txt"/>
 </Library>

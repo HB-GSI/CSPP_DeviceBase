@@ -1,0 +1,85 @@
+This base class only works together with a GUI class and a child class, which depends on the specific instrument and includes the driver. 
+
+All three classes communicate over PVs with each other. A GUI or a device class has to implement specific PVs / register to specific PVs:
+
+GUI
+----
+registers to: 
+-SetPosition
+-ActPosition
+-Moving?
+-Referenced?
+-Error?
+-RangeError?
+-unit
+-PhysicalName
+-LogicalPositionArray
+
+publishes:
+-Move_Msg
+-MoveAfterReference_Msg
+-ReferenceMove_Msg
+-StopMovement_Msg
+-AbortAllMovements_Msg
+
+Use the Messages to send events to the device class(es) and use the registered PVs to show actual Infos on the front panel. The Moving? variables
+are just here for information. You can always send new Move commands, even if the motor is already moving. These things are done by the CS++Motor.lvclass.
+
+CS++Motor.lvclass
+-----------------
+registers to:
+-RawActPosition
+-Moving?
+-Referenced?
+-Error?
+-Move_Msg
+-MoveAfterReference_Msg
+-ReferenceMove_Msg
+-StopMovement_Msg
+-AbortAllMovements_Msg
+
+publishes:
+-SetPosition
+-RawSetPosition
+-ActPosition
+-SimultaneousMovement?
+-AxisOverwrite?
+-PhysicalName
+-unit
+-StartVelocity
+-StopVelocity
+-Acceleration
+-RangeMin
+-RangeMax
+-Scaling
+-RangeRefError
+-NoOfCommands
+-LogicalPositionArray
+
+Normaly you should not touch this class (and if you do, please inform me, D.Neidherr@gsi.de). This class gets the commands from the GUI over the message system.
+It has an internal state machine to decide which commands have to be send to the device and when. All device actors have to use this active thread which this class
+delivers and therefore have to inherit from this class.
+
+Device.lvclass
+--------------
+registers to:
+nothing
+
+publishes:
+-RawActPosition
+-Moving?
+-Referenced?
+-Error?
+
+Include all instrument drivers for the initialization etc here. You have to do four things:
+
+1) Overwrite the "Initial Attributes.vi" and copy the content of another Device-Motor actor.
+2) Overwrite the "Initial Device Core.vi" and the "Stop Core.vi", publish the needed variables and include device driver VIs if necessary.
+3) Overwrite configuration VIs (like "Configure Start Velocity Core.vi) and include device driver VIs to add these functions to your class and overwrite the important VIs
+(like Move Core.vi) and also include device drivers there.
+4) Make sure the four published variables are always up to date. Maybe you have to include an additional thread in the "Actor Core.vi" of this class and use polling to
+constantly ask the motor for its status, maybe the motor publishes these information by itself. This point is very hardware dependent. The CS++Nanotec actor is an example
+for a motor which needs polling to aqcuire these information; the CS++IEFWerner is an example for a motor which publishes its status automaticaly. Both can be fond in the
+CSPP_Motion package.
+
+1.Apr2016, D.Neidherr (D.Neidherr@gsi.de)
