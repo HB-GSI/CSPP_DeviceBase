@@ -82,4 +82,11 @@ constantly ask the motor for its status, maybe the motor publishes these informa
 for a motor which needs polling to aqcuire these information; the CS++IEFWerner is an example for a motor which publishes its status automaticaly. Both can be fond in the
 CSPP_Motion package.
 
+INI-File Settings
+-----------------
+Everything should be straight forward. Just be aware of that the scaling parameter is the factor multiplied with the Raw-Step values to get the physical values (mm etc).
+So the unit of the scaling parameter is for example [scaling] = mm / steps. The offset is also in physical units.
+The upper and lower limit have to be included as physical values. Note that the limits also reflects a possible scaling offset, for example if the motor starts at 0 steps,
+the scaling offset is 3 cm, then the lower limit has to be 3 cm as well.
+
 1.Apr2016, D.Neidherr (D.Neidherr@gsi.de)
