@@ -327,6 +327,15 @@ Die sprachspezifischen Genehmigungen und Beschränkungen unter der Lizenz sind d
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
 		</Item>
+		<Item Name="PhysName2AxisNo.vi" Type="VI" URL="../PhysName2AxisNo.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;L!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"R!-0````]45'BZ=WFD97R$;'&amp;O&lt;G6M4G&amp;N:1![1(!!(A!!)Q^$5SML47^U&lt;X)O&lt;(:M;7)21V-L+UVP&gt;'^S,GRW9WRB=X-!$5.4+SN.&lt;X2P=C"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!21!5!#E&amp;Y;8./&gt;7VC:8)!!$J!=!!?!!!D$U.4+SN.&lt;X2P=CZM&gt;GRJ9B&amp;$5SML47^U&lt;X)O&lt;(:D&lt;'&amp;T=Q!-1V-L+UVP&gt;'^S)'FO!!"B!0!!$!!$!!1!"1!'!!1!"!!%!!1!"Q!%!!A!#1)!!(A!!!U)!!!!!!!!#1!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!)!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!+!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">3</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">3</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1074541056</Property>
+		</Item>
 		<Item Name="ReferenceMove Core.vi" Type="VI" URL="../ReferenceMove Core.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;1#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;#!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$J!=!!?!!!D$U.4+SN.&lt;X2P=CZM&gt;GRJ9B&amp;$5SML47^U&lt;X)O&lt;(:D&lt;'&amp;T=Q!.1V-L+UVP&gt;'^S)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!"&amp;!"1!+18BJ=UZV&lt;7*F=A!!/E"Q!"Y!!#-01V-L+UVP&gt;'^S,GRW&lt;'FC%5.4+SN.&lt;X2P=CZM&gt;G.M98.T!!R$5SML47^U&lt;X)A;7Y!!&amp;1!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!"Q!)!A!!?!!!$1A!!!!!!!!!!!!!D1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!!A!!!#1!!!!!!%!#1!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
